@@ -1,0 +1,77 @@
+﻿@model DWWExternalWebsite.Models.Contact
+
+<h4>Contact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" asp-controller="Contact" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" required maxlength="50"/>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" required maxlength="50" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label"></label>
+                <textarea asp-for="Message" class="form-control" required rows="8"></textarea>
+              
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" required maxlength="100" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" required maxlength="50" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company" class="control-label"></label>
+                <input asp-for="Company" class="form-control" maxlength="100"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarketingSource" class="control-label">Where did you hear about us?</label>
+                <select asp-for="MarketingSource" class="form-control">
+                    <option value="" selected></option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Event">An event</option>
+                    <option value="DirectMarketing">You contacted  me</option>
+                    <option value="SearchEngine">Search Engine</option>
+                    <option value="News">News Article</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Referral">Referral</option>
+                </select>
+                
+                <!--<input asp-for="MarketingSource"  class="form-control" />-->
+                <span asp-validation-for="MarketingSource" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4 offset-md-2">
+        Email: 
+        <a href="mailto:hello@designwithwisdom.co.uk">hello@designwithwisdom.co.uk</a>
+        <br />
+        <br />
+        Phone:
+        <a href="tel:+441737216024">+44 (0)1737 216024</a>
+
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

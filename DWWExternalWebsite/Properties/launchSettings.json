@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "DWWExternalWebsite": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CUSTOMCONNSTR_DBConnection": "mongodb+srv://uDWWExt:nEvo5waJXAX4RVZ5@dbdwwext.a0rw8jk.mongodb.net/?retryWrites=true&w=majority"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7174;http://localhost:5125"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:61624",
+      "sslPort": 44392
+    }
+  }
+}

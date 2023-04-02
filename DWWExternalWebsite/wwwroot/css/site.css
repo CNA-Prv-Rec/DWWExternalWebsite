@@ -1,0 +1,116 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color:black;
+  color:white;
+
+}
+
+h1 {
+    color: orange;
+}
+h2 {
+    color: orange;
+}
+h3 {
+    color: orange;
+}
+h4 {
+    color: orange;
+}
+h5 {
+    color: orange;
+}
+h6 {
+    color: orange;
+}
+
+
+.navbar-brand{
+ font-weight:bold;
+ font-size:x-large;
+
+}
+
+
+
+
+a {
+    color: orange;
+}
+a:hover{
+    color:gold;
+}
+a:active{
+    color:gold;
+
+}
+
+.text-light {
+    color: orange !important;
+    font-weight:bold;
+   
+}
+.text-light:hover {
+    color: gold !important;
+}
+.text-light:active {
+    color: gold !important;
+
+}
+
+.brandcolor {
+    color: orange !important;
+}
+
+.brandcolor:hover {
+    color: gold !important;
+}
+
+.brandcolor:active {
+    color: gold !important;
+}
+img.spanimage{
+    border:none;
+    border-bottom:none;
+    border-top: none;
+    width:100%;
+}
+
+img.smallimage {
+    border: none;
+    border-bottom: none;
+    border-top: none;
+    width: 50%;
+}
+
+.btn {
+    background-color: orange;
+    border-color: gold;
+}
+.btn.primary {
+    background-color: orange;
+    border-color:gold;
+}
+btn:hover {
+    background-color: gold !important;
+    color: black;
+}
+btn.primary:hover{
+    background-color:gold !important;
+    color:black;
+}
