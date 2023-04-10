@@ -4,9 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>0b0983f9-bc32-4738-a600-7e5ebfef70c8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" Version="2.21.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.TraceSource" Version="7.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.12" />
     <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.19.0" />

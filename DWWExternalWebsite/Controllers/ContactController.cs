@@ -26,12 +26,16 @@ namespace DWWExternalWebsite.Controllers
         // GET: ContactController/Details/5
         public ActionResult Details(int id)
         {
+            _logger.LogInformation("ContactDetails: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
+
             return View();
         }
 
         // GET: ContactController/Create
         public ActionResult Create()
         {
+            _logger.LogInformation("ContactCreate: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
+
             return View();
         }
 
@@ -42,6 +46,7 @@ namespace DWWExternalWebsite.Controllers
         {
             try
             {
+                _logger.LogInformation("ContactPost: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
 
 
                 var connectionString = Environment.GetEnvironmentVariable("CUSTOMCONNSTR_DBConnection");
@@ -70,6 +75,8 @@ namespace DWWExternalWebsite.Controllers
         // GET: ContactController/Edit/5
         public ActionResult Edit(int id)
         {
+            _logger.LogInformation("ContactEdit: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
+
             return View();
         }
 
@@ -78,6 +85,8 @@ namespace DWWExternalWebsite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
+            _logger.LogInformation("ContactEdit(id): " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
+
             try
             {
                 return RedirectToAction(nameof(Index));

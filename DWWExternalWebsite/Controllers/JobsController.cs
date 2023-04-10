@@ -15,16 +15,21 @@ namespace DWWExternalWebsite.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Index: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
             return View();
         }
 
         public IActionResult DevOpsEngineer()
         {
+            _logger.LogInformation("DevOpsEngineer: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
+
             return View();
         }
 
         public IActionResult SalesAccountManager()
         {
+            _logger.LogInformation("SalesAccountManager: " + Request.HttpContext.Connection.RemoteIpAddress.ToString());
+
             return View();
         }
 
