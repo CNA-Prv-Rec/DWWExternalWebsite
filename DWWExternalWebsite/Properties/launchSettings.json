@@ -5,7 +5,7 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CUSTOMCONNSTR_DBConnection": "mongodb+srv://uDWWExt:nEvo5waJXAX4RVZ5@dbdwwext.a0rw8jk.mongodb.net/?retryWrites=true&w=majority",
+        "CUSTOMCONNSTR_DBConnection": "mongodb+srv://uDWWExt:YH2D5dRqxqeWj8Q0@dbdwwext.a0rw8jk.mongodb.net/?retryWrites=true&w=majority",
         "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=47a05d50-b74f-452e-887f-df194e7859f9;IngestionEndpoint=https://uksouth-1.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/"
       },
       "dotnetRunMessages": true,

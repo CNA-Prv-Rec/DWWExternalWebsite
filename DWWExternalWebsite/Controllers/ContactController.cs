@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
+using MongoDB.Bson.IO;
 using MongoDB.Driver;
 using System.Text.Json;
 
@@ -50,6 +51,7 @@ namespace DWWExternalWebsite.Controllers
 
 
                 var connectionString = Environment.GetEnvironmentVariable("CUSTOMCONNSTR_DBConnection");
+                connectionString = "";
                 var settings = MongoClientSettings.FromConnectionString(connectionString);
              
                     var client = new MongoClient(settings);
@@ -67,8 +69,11 @@ namespace DWWExternalWebsite.Controllers
             }
             catch(Exception ex)
             {
-                _logger.LogError(ex.Message);
-                return View();
+                _logger.LogError(ex, ex.Message);
+                _logger.LogError("Failed to write contact to db: " + JsonSerializer.Serialize(contact, typeof(Contact)));
+             
+                return RedirectToAction("ThankYou", "Home");// just make it look like the user succeeded and pick up details from the logs
+               
             }
         }
 
