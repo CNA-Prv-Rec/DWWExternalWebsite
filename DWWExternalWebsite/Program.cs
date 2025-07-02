@@ -24,15 +24,9 @@ namespace DWWExternalWebsite
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddEndpointsApiExplorer();
-            /*
-            builder.Services.Configure<TelemetryConfiguration>((config) =>
-            {
-                config.TelemetryChannel = channel;
-                config.ConnectionString = Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING");
-            });
-            */
+            
         
-          //  builder.Logging.ClearProviders();
+          
             builder.Logging.AddApplicationInsights();
          
             builder.Logging.AddApplicationInsights(configureTelemetryConfiguration: (config) =>
